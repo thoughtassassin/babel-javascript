@@ -7,6 +7,8 @@ To run the project:
 
 `npm start`
 
+(webpack-dev-server will run the project on localhost:8080.)
+
 To run a production build:
 
 `npm run build`
