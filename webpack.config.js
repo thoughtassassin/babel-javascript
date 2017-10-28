@@ -7,7 +7,7 @@ const extractSass = new ExtractTextPlugin({
 });
 
 const config = {
-  entry: ['./index.js', './scss/main.scss'],
+  entry: ['./modules/index.js', './scss/main.scss'],
   output: {
     filename: 'bundle.js'
   },
@@ -22,19 +22,19 @@ const config = {
         { 
           test: /\.scss$/,
           use: extractSass.extract({
-                use: [{
-                    loader: "css-loader", 
-                    options: {
-                      sourceMap: true
-                    }
-                }, {
-                    loader: "sass-loader",
-                    options: {
-                      sourceMap: true
-                    }
-                }],
-                // use style-loader in development
-                fallback: "style-loader"
+              use: [{
+                  loader: "css-loader", 
+                  options: {
+                    sourceMap: true
+                  }
+              }, {
+                  loader: "sass-loader",
+                  options: {
+                    sourceMap: true
+                  }
+              }],
+              // use style-loader in development
+              fallback: "style-loader"
             })
         }
     ]

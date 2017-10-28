@@ -1,4 +1,4 @@
-import './scss/main.scss';
+import '../scss/main.scss';
 import {testModule} from './secondaryModule.js';
 
 testModule.printMessage('this is what I am printing');
